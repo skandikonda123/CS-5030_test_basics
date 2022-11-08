@@ -39,6 +39,11 @@ class todoservice {
           }
         }
       }
+
+      delete_todo(id) {
+        this.todos.todo.splice(id, this.todos.todo.length - 1);
+        return this.todos.todo;
+      }
   }
   
   module.exports = todoservice;

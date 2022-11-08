@@ -38,4 +38,14 @@ describe("todo test suite", () => {
     ).not.toEqual(todo_service_for_update.get_todos().todo[0]);
   });
 
+  test("Deleting any Todo after the parameter", () => {
+    let todo_service_for_delete = new todoservice();
+
+    expect(todo_service.delete_todo(2)).not.toEqual(
+      todo_service_for_delete.get_todos().todo
+    );
+
+    expect(todo_service.delete_todo(1)[1]).toBeUndefined();
+  });
+
 });

@@ -31,6 +31,14 @@ class todoservice {
       return todo;
     }
   
+    update_todo(id, todo) {
+        for (var i = 0; i < this.todos.todo.length; i++) {
+          if (this.todos.todo[i].title == id) {
+            this.todos.todo[i] = todo;
+            return this.todos.todo[i];
+          }
+        }
+      }
   }
   
   module.exports = todoservice;

@@ -27,4 +27,15 @@ describe("todo test suite", () => {
     );
   });
 
+  test("Update Todo, ", () => {
+    let todo_service_for_update = new todoservice();
+    expect(
+      todo_service.update_todo("subhash 1", {
+        Title: "subi 1",
+        Description: "Hoping to this be the updated",
+        despair: false,
+      })
+    ).not.toEqual(todo_service_for_update.get_todos().todo[0]);
+  });
+
 });
